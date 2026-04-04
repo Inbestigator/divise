@@ -1,0 +1,29 @@
+{
+  "name": "divise",
+  "version": "0.1.0",
+  "description": "Extract related iterator values into a map.",
+  "scripts": {
+    "dist": "rm -fr dist && tsc",
+    "checks": "tsc --noEmit && biome check --write",
+    "dry-publish": "bun publish --dry-run"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.10",
+    "typescript": "^6.0.2"
+  },
+  "exports": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "iterator",
+    "split"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inbestigator/divise.git"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts"
+}
