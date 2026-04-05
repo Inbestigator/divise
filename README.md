@@ -1,8 +1,10 @@
 # Divise
 
-Divise, (from the French word for split) will extract related iterator values into a discriminated map.
+Divise (from the French word for split) will extract related iterator values into a discriminated map.
 
 ## Examples
+
+Iterators
 
 ```ts
 const events = divise(
@@ -15,12 +17,24 @@ const events = divise(
 console.log(events.read.length);
 ```
 
+Async iterators
+
 ```ts
 // Sample socket messages:
 // { type: "connect" }
 // { type: "message", content: "foo" }
 const socketEvents = divise(iterateWebSocket(ws), "type");
-for await (const message of socketEvents.message) {
-  console.log(message);
+for await (const event of socketEvents.message) {
+  console.log(event);
 }
+```
+
+Callbacks
+
+```ts
+divise(iterateWebSocket(ws), "type", {
+  message(event) {
+    console.log(event);
+  },
+});
 ```

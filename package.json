@@ -1,6 +1,6 @@
 {
   "name": "divise",
-  "version": "0.1.0",
+  "version": "0.1.0-canary.1",
   "description": "Extract related iterator values into a map.",
   "scripts": {
     "dist": "rm -fr dist && tsc",
@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.10",
+    "@types/bun": "^1.3.11",
     "typescript": "^6.0.2"
   },
   "exports": "./dist/index.js",
