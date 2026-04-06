@@ -1,6 +1,6 @@
 {
   "name": "divise",
-  "version": "0.1.0-canary.1",
+  "version": "0.1.0",
   "description": "Extract related iterator values into a map.",
   "scripts": {
     "dist": "rm -fr dist && tsc",
